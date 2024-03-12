@@ -1,0 +1,102 @@
+body {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.current {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
+}
+
+main {
+  background-color: white;
+  width: 90%;
+  border-radius: 25px;
+  margin: 25px 0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  height: 350px;
+  margin-bottom: 20px;
+}
+
+article {
+  text-align: center;
+  font-size: 22px;
+  width: 85%;
+  padding-left: 20px;
+}
+
+header img {
+  border-radius: 25px;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+  border-top: 3px dotted transparent;
+}
+
+.styledButton {
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.styledButton:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  background-color: whitesmoke;
+}
+
+.exercise {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.sidebar {
+  width: 15%;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.sidebar ul li {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.frame {
+  height: 500px;
+  width: 80%;
+  border-radius: 25px;
+  border: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
