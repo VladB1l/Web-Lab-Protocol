@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav {
+        list-style: none;
+    }
+
+    #example {
+        color: darkgoldenrod;
+        font-size: 20px;
+    }
+
+    .productListItem button {
+        font-size: 20px;
+        background-color: #6a8704;
+        padding: 8px 55px;
+        color: white;
+    }
+</style>
+
+<body>
+    <h2>Типи селекторів</h2>
+    <ol>
+        <li>Селектор елемента (тега);</li>
+        <li>Селектор класу;</li>
+        <li>Селектор ідентифікатор;</li>
+        <li>Дочірні;</li>
+        <li>Універсальні селектори;</li>
+    </ol>
+    <h2>Селектор тегу</h2>
+    <p>Якщо як селектор виступає ім'я елемента (тега), то цьому випадку
+        всі елементи даного тега будуть відповідати заданим стилям.
+        Якщо всередині цих тегів будуть текстові елементи, вони
+        успадкуватимуть певні правила.
+    </p>
+    <pre><code>
+            h1 {
+                text-transform: uppercase;
+            }
+            &lt;h1&gt;приклад заголовку &lt;/h1&gt;
+    </code></pre>
+
+    <h1 style="text-transform: uppercase;">приклад заголовку</h1>
+
+    <h2>Селектор класу</h2>
+    <p>Якщо потрібно встановити стилі для індивідуального елемента або
+        задати різні стилі для одного тега слід використовувати селектор класу.
+
+        Імена класів повинні починатися з латинського символу і можуть містити
+        символ дефісу і підкреслення.
+
+        Щоб прив'язати до елемента клас,
+        необхідно у тезі, що відкриває, задати
+        атрибут class і привласнити йому ім'я
+        класу, описаного в стилях
+    </p>
+    <pre><code> &lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Free-To-Play&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Latest Games&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Coming Soon&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;style&gt;
+    .nav {
+    list-style: none;
+    }
+    &lt;/style&gt;</code></pre>
+
+
+    <ul class="nav">
+        <li><a href="">Free-To-Play</a></li>
+        <li><a href="">Latest Games</a></li>
+        <li><a href="">Coming Soon</a></li>
+    </ul>
+    <h2>Селектор ідентифікатора</h2>
+    <p>Ідентифікатор – особливий вид селектора, яким позначається один
+        елемент на сторінці. Щоб вказати селектор ідентифікатор, у CSS
+        необхідно використовувати конструкцію #ім'я_ідентифікатора.
+    </p>
+    <pre><code>
+        &lt;p id=&quot;example&quot;&gt; Lorem, ipsum dolor sit.&lt;/p&gt;
+       
+            #example{
+                color:darkgoldenrod;
+                font-size: 20px;
+            }
+    </code></pre>
+    <p id="example">Lorem ipsum dolor sit.</p>
+
+    <h2>Дочірні та контекстні селектори</h2>
+    <p>Дочірнім називається елемент, який безпосередньо
+        розташовується всередині батьківського елементу.
+    </p>
+    <pre><code>
+        .productListItem button {
+        font-size: 20px;
+        background-color: #6a8704;
+        padding: 8px 55px;
+        color: white;
+    }
+    &lt;div class=&quot;productListItem&quot;&gt;
+        &lt;button&gt;&lt;a href=&quot;&quot;&gt;Play Now&lt;/a&gt;&lt;/button&gt;
+    &lt;/div&gt;
+      </code></pre>
+    <div class="productListItem">
+        <button><a href="">Play Now</a></button>
+    </div>
+    <p>Універсальні селектори - це селектори CSS, які відповідають будь-якому елементу на веб-сторінці. Вони
+        використовуються для застосування стилів до всіх елементів на сторінці без вказівки конкретного типу або класу
+        елементу. Ось кілька прикладів універсальних селекторів:</p>
+    <pre><code>
+        * {
+           CSS стилі
+        }
+    </code></pre>
+</body>
+
+
+</html>

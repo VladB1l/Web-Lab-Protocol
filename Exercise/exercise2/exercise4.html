@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: "Ubuntu", sans-serif;
+        background-color: blueviolet;
+        color: white;
+    }
+
+    table {
+        font-size: 20px;
+        border-spacing: 20px;
+    }
+
+    table caption {
+        border-bottom: 3px solid white;
+        padding: 15px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    table th {
+        text-align: left;
+    }
+
+    table th:last-child {
+        padding-left: 150px;
+    }
+
+    table tr td {
+        color: rgb(213, 213, 213);
+    }
+
+    table tr td:nth-child(3) {
+        padding-left: 150px;
+    }
+
+    .spaceBetween {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <h1 style="text-align:center ;"> Шрифти Текст таблиці фон контур списки</h1>
+    <h3>Шрифти</h3>
+    <pre><code>
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+        &lt;link
+            href=&quot;https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap&quot;
+            rel=&quot;stylesheet&quot;&gt;
+        
+        body {
+            font-family: &quot;Ubuntu&quot;, sans-serif;       
+        }
+    </code></pre>
+    <h3>Таблиці</h3>
+    <pre><code>&lt;table&gt;
+        &lt;caption&gt;System Requirements (PUBG)&lt;/caption&gt;
+        &lt;tr&gt;
+            &lt;th colspan=&quot;2&quot;&gt;MINIMUM&lt;/th&gt;
+            &lt;th colspan=&quot;2&quot;&gt;RECOMMENDED&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;OS&lt;/td&gt;
+            &lt;td&gt;64-bit Windows 10&lt;/td&gt;
+            &lt;td&gt;OS&lt;/td&gt;
+            &lt;td&gt;64-bit Windows 10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Processor&lt;/td&gt;
+            &lt;td&gt;Intel Core i5-4430 / AMD FX-6300&lt;/td&gt;
+            &lt;td&gt;Processor&lt;/td&gt;
+            &lt;td&gt; Intel Core i5-6600K / AMD Ryzen 5 1600&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Memory&lt;/td&gt;
+            &lt;td&gt;8 GB RAM&lt;/td&gt;
+            &lt;td&gt;Memory&lt;/td&gt;
+            &lt;td&gt; 16 GB RAM&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Graphics&lt;/td&gt;
+            &lt;td&gt;NVIDIA GeForce GTX 960 2GB / AMD Radeon R7 370 2GB&lt;/td&gt;
+            &lt;td&gt;Graphics&lt;/td&gt;
+            &lt;td&gt;NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    table {
+        font-size: 20px;
+        border-spacing: 20px;
+      }
+      
+      table caption {
+        border-bottom: 3px solid white;
+        padding: 15px;
+        font-size: 36px;
+        font-weight: 700;
+      }
+      
+      table th {
+        text-align: left;
+      }
+      
+      table th:last-child {
+        padding-left: 150px;
+      }
+      
+      table tr td {
+        color: rgb(213, 213, 213);
+      }
+      
+      table tr td:nth-child(3) {
+        padding-left: 150px;
+      }
+</code></pre>
+    <table>
+        <caption>System Requirements (PUBG)</caption>
+        <tr>
+            <th colspan="2">MINIMUM</th>
+            <th colspan="2">RECOMMENDED</th>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>64-bit Windows 10</td>
+            <td>OS</td>
+            <td>64-bit Windows 10</td>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>Intel Core i5-4430 / AMD FX-6300</td>
+            <td>Processor</td>
+            <td> Intel Core i5-6600K / AMD Ryzen 5 1600</td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>8 GB RAM</td>
+            <td>Memory</td>
+            <td> 16 GB RAM</td>
+        </tr>
+        <tr>
+            <td>Graphics</td>
+            <td>NVIDIA GeForce GTX 960 2GB / AMD Radeon R7 370 2GB</td>
+            <td>Graphics</td>
+            <td>NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB</td>
+        </tr>
+    </table>
+    <p>Списки</p>
+    <ul class="spaceBetween">
+        <li><a href="">Free-To-Play</a></li>
+        <li><a href="">Latest Games</a></li>
+        <li><a href="">Coming Soon</a></li>
+    </ul>
+    <pre><code>
+        .spaceBetween {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        &lt;ul class=&quot;nav spaceBetween&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Free-To-Play&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Latest Games&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Coming Soon&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+    </code></pre>
+</body>
+
+</html>
