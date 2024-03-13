@@ -1,4 +1,5 @@
 const nav = document.querySelector("nav");
+const iframe = document.getElementById("iframe")
 let navList = [];
 
 for (let i = 1; i <= 8; i++) {
@@ -14,9 +15,8 @@ const exercises = {
 
 
 function ToggleExercise(clicked_id, exercise_id) {
-    let source = `./Exercise/${exercise_id}/${clicked_id}.html`;
+    let source = `./Exercise/${exercise_id}/exercise${clicked_id}.html`;
     iframe.src = source;
-
 }
 
 
