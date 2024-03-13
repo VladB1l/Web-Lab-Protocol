@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Завдання №3 FLEXBOX</h1>
+    <p>Виконати Завдання №3, використовуючи засоби CSS та FLEXBOX</p>
+    <a href="../../Laba_3/Task3.html " target="_blank">Посилання на готову верстку.</a>
+    <h2>HTMl FLEXBOX</h2>
+    <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="Task3.css"&gt;
+    &lt;title&gt;Завдання №3 Л.Р.3&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;p&gt; Варіант №2 &lt;/p&gt;
+        &lt;h1&gt;Професія Java-розробник&lt;/h1&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;Портфоліо для старту кар'єри&lt;/li&gt;
+            &lt;li&gt;Навчання на реальних кейсах&lt;/li&gt;
+            &lt;li&gt;Заробіток після 4 місяців навчання&lt;/li&gt;
+            &lt;li&gt;Можна працювати віддалено&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;h2&gt;Як проходить навчання&lt;/h2&gt;
+        &lt;ul class="list"&gt;
+            &lt;li&gt;
+                &lt;div class="img_div"&gt;
+                    &lt;span &gt;1&lt;/span&gt;
+                    &lt;h4&gt;Дивіться відеолекції&lt;/h4&gt;
+                    &lt;p&gt;Якісне відео з зрозумілим поясненням теорії.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;img src="./img/List_1.png" alt="list_img"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="img_div"&gt;
+                    &lt;span &gt;2&lt;/span&gt;
+                    &lt;h4&gt;Робите завдання і відправляєте на перевірку&lt;/h4&gt;
+                    &lt;p&gt;Поспішати не треба, вибирайте зручний режим навчання.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;img src="./img/List_2.png" alt="list_img"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="img_div"&gt;
+                    &lt;span &gt;3&lt;/span&gt;
+                    &lt;h4&gt;Чи отримуєте розбір вашої роботи&lt;/h4&gt;
+                    &lt;p&gt;Ваш куратор розповість про помилки і про те, як їх виправити.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;img src="./img/List_3.png" alt="list_img"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="img_div"&gt;
+                    &lt;span &gt;4&lt;/span&gt;
+                    &lt;h4&gt;Чи працюєте над помилками&lt;/h4&gt;
+                    &lt;p&gt;Проходьте перевірку ще раз, щоб переконатися, що в цей раз все правильно.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;img src="./img/List_4.png" alt="list_img"&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h2&gt;Рівні навчання&lt;/h2&gt;
+
+        &lt;div class="level"&gt;
+            &lt;img src="./img/Level_1.png" alt="level_img"&gt;
+            &lt;div&gt;
+                &lt;h4&gt;Перший рівень: чітка і зрозуміла теорія&lt;/h4&gt;
+                &lt;p&gt;За 4 місяці вам необхідно буде пройти 16 тем. Ви
+                    самостійно вивчіть базові навички, з якими зможете
+                    створювати справжні проекти. Ви створите дипломний
+                    проект - движок блогу в веб-інтерфейсі. Захист проекту
+                    проходить у відкритому режимі - на нашому майданчику
+                    або по відеозв'язку.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;h2&gt;Рівні навчання&lt;/h2&gt;
+
+        &lt;div class="level"&gt;
+            &lt;img src="./img/Level_2.png" alt="level_img"&gt;
+            &lt;div&gt;
+                &lt;h4&gt;Другий рівень: інтенсивна практика&lt;/h4&gt;
+                &lt;p&gt;Під керівництвом наставника ви в складі команди
+                    створите власну соціальну мережу. Фактично ця
+                    частина програми прирівнюється до стажування. Вам
+                    видадуть ТЗ і дизайн проекту. Всі процеси, через які ви
+                    пройдете, - це максимально наближений до бойових
+                    умов досвід. Саме так створюється комерційне
+                    програмне забезпечення в фірмах роботодавців.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;div&gt;
+            &lt;p&gt;© 2022&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/Facebook.png" alt="footer_img"&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/VK.png" alt="footer_img"&gt; &lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/YouTube.png" alt="footer_img"&gt; &lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/Telegram.png" alt="footer_img"&gt;&lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="./img/Instagram.png" alt="footer_img"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </code>
+    </pre>
+    <h2>CSS FLEXBOX</h1>
+    <pre>
+        <code>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            
+            
+            header {
+                font-size: 25px;
+                font-weight: 600;
+                width: 80%;
+                margin: auto;
+            }
+            
+            header p {
+                text-align: center;
+                color: #FF0000;
+            }
+            
+            h1 {
+                background-color: #FFBD59;
+                padding: 10px;
+            }
+            
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+            }
+            
+            .nav li {
+                background-color: #FFBD59;
+                padding: 15px;
+                margin-left: 10px;
+                list-style-position: inside;
+                text-align: center;
+            }
+            
+            .nav li:first-child {
+                margin-left: 0;
+            }
+            
+            
+            main {
+                margin-top: 30px;
+                font-size: 19px;
+                width: 80%;
+                margin: auto;
+            }
+            
+            .list {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0;
+            }
+            
+            .list li {
+                border: 3px solid black;
+                width: 25%;
+                height: 400px;
+                margin-left: 50px;
+            }
+            
+            .list li:first-child {
+                margin-left: 0;
+            }
+            
+            .list span {
+                clip-path: circle(40%);
+                background-color: #FFBD59;
+                padding: 25px;
+                font-weight: 900;
+            }
+            
+            .main p {
+                font-size: 17px;
+            }
+            
+            main h2 {
+                margin-top: 50px;
+            }
+            
+            .img_div {
+                padding: 25px;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+            
+            .list img {
+                width: 100%;
+                height: 35%;
+            
+            }
+            
+            .level {
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-evenly;
+                text-align: justify;
+            }
+            
+            .level div {
+                width: 30%;
+            }
+            
+            footer{
+                display: flex;
+                align-items: center;
+                height: 65px;
+                margin-top: 10px;
+            }
+            
+            footer div{
+                width: 75%;
+                background-color: black;
+                color: white;
+                line-height: 20px;
+                height: 65px;
+                padding-left: 20px;
+            }
+            
+            footer ul{
+                display: flex;
+                justify-content: space-around;
+                width: 25%;
+                list-style: none;
+            }
+            
+            footer img{
+                width: 65px;
+                height: 62px;
+            }
+        </code>
+    </pre>
+</body>
+
+</html>

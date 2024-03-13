@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+
+h1,h4{
+    text-align: center;
+    color: goldenrod;
+}
+
+.text{
+    width: 60%;
+    margin:auto;
+}
+
+.table{
+    font-size: 30px;
+    text-align: center;
+    width: 60%;
+    margin:auto;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px #888888;
+}
+
+.header{
+    background-color: rgb(252, 185, 13);
+    border: 2px solid black;
+}
+
+.flex1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.flex1 div{
+    background-color: white;
+    border: 2px solid black;
+    width: 25%;
+    height: 70px;
+}
+
+.main{
+    display: flex ;
+}
+
+.left_side{
+    line-height: 700px;
+    background-color: rgb(35, 93, 255);
+    width: 18%;
+    border: 2px solid black;
+}
+
+.right_side{
+
+    padding: 30px;
+    width: 65%;
+    margin: auto;
+}
+
+.first{
+    background-color: rgb(228, 20, 86);
+    padding: 30px;
+    border: 2px solid black;
+}
+
+.flex2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.second{
+    line-height: 500px;
+    width: 50%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.pink{
+    background-color: rgb(228, 20, 86);
+    border-top: 3px solid black;
+    height: 100px;
+}
+
+.third{
+    line-height: 600px;
+    width: 40%;
+    background-color: rgb(35, 93, 255);
+    border: 2px solid black;
+}
+
+.footer{
+    background-color: rgb(252, 185, 13);
+    border: 2px solid black;
+    line-height: 80px;
+}
