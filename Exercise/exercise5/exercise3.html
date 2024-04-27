@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 60%;
+            display: block;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Завдання №2</h1>
+    <p>
+        Сформувати багаторівневе меню (горизонтальне та
+        вертикальне), пункти меню взяти із статичного
+        масиву. При натисканні на визначений пункт меню
+        має завантажуватися відповідна HTML-сторінка.
+        Меню має бути присутнім на всіх сторінках.
+    </p>
+
+    <img src="../../img/Laba5(2).png" alt="Laba5">
+    <img src="../../img/Laba5(3).png" alt="Laba5">
+
+    <h2>HTML код сторінки завдання №2</h2>
+    <pre>
+        <code>
+            &lt;div&gt;
+                &lt;ul class=&quot;nav spaceBetween&quot;&gt;
+    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;horizontalMenu&quot; hidden&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+    
+                &lt;/ul&gt;
+                &lt;p class=&quot;closeBtn&quot;&gt;X&lt;/p&gt;
+            &lt;/div&gt;
+        </code>
+    </pre>
+
+    <h2>JavaScript код сторінки завдання №2</h2>
+    <pre>
+        <code>  
+            let navArr = ['Free-To-Play', 'Latest Games', 'Coming Soon'];
+            let linkArr = ['', '', '']
+            let nav = document.querySelectorAll('.nav');
+            
+            let burger = document.querySelector('.burger');
+            let horizontalMenu = document.querySelector('.horizontalMenu');
+            let closeBtn = document.querySelector('.closeBtn');
+            
+            nav.forEach(element => {
+                MenuInsert(element)
+            });
+            
+            burger.addEventListener('click', MenuToggler);
+            closeBtn.addEventListener('click', MenuToggler);
+            
+            function MenuToggler() {
+                if (horizontalMenu.hidden) {
+                    horizontalMenu.hidden = !horizontalMenu.hidden
+                    setTimeout(() => {
+                        horizontalMenu.style.transform = "translate(-200px, 0px)"
+                    }, 0)
+                } else {
+                    horizontalMenu.style.transform = "translate(0px, 0px)"
+                    setTimeout(() => {
+                        horizontalMenu.hidden = !horizontalMenu.hidden
+                    }, 400)
+                }
+            }
+            
+            function MenuInsert(nav) {
+                for (let i = 0; i < navArr.length; i++) {
+                    let navItem = document.createElement('li');
+                    navItem.innerHTML = `<a href ='${linkArr[i]}'> ${navArr[i]} </a>`;
+                    nav.append(navItem)
+                }
+            }
+            
+        </code>
+    </pre>
+</body>
+
+</html>
