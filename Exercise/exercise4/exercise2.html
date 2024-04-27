@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    img {
+      width: 500px;
+      display: block;
+      margin: auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Завдання</h2>
+  <p>У цьому завданні ми використовували медіа запити. В моєму випадку я змінював стилі 4 рази в залежності від розмірів
+    єкрану (1440px, 1024px, 768px, 425px )</p>
+  <p>В основному зміни були в розмірах шривтів та розмірів певних блоків. Із цікавого були тільки зміни карток ігр та
+    меню сторінки, що відрізняються на мобільній та планшетній версії.</p>
+  <h2>Різниця між версіями:</h2>
+
+  <h3>Картка ігри</h3>
+  <div>
+    <img src="../../img/exercise4(1).png" alt="exercise4">
+    <img src="../../img/exercise4(2).png" alt="exercise4">
+  </div>
+
+  <h3>Головне меню</h3>
+  <div>
+    <img src="../../img/exercise4(3).png" alt="exercise4">
+    <img src="../../img/exercise4(4).png" alt="exercise4">
+  </div>
+
+  <h2>Код картки</h2>
+  <h3>CSS</h3>
+  <pre>
+        <code>
+          .productListItem {
+            background-color: #25272f;
+            display: flex;
+            justify-content: flex-start;
+            gap: 28px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+            transition: 0.5s;
+            height: 150px;
+          }
+
+          @media screen and (max-width: 425px) {
+            .productListItem {
+              flex-direction: column;
+              height: 100%;
+            }
+          }
+        </code>
+    </pre>
+
+  <h2>Меню</h2>
+  <h3>CSS</h3>
+  <pre>
+          <code>
+            .nav {
+              gap: 60px;
+              padding: 0 27px;
+              font-size: 20px;
+              font-weight: 700;
+            }
+            .burger {
+              display: none;
+            }
+  
+            @media screen and (max-width: 425px) {
+              .nav {
+                display: none;
+              }
+              .burger {
+                display: block;
+                cursor: pointer;
+              }
+            }
+          </code>
+      </pre>
+</body>
+
+</html>
