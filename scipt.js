@@ -3,7 +3,8 @@ const iframe = document.getElementById("iframe")
 let navList = [];
 
 for (let i = 1; i <= 9; i++) {
-    navList.push(`Лабораторна робота №${i}`);
+    index = i === 6 ? 5.1 : (i < 6 ? i : i - 1);
+    navList.push(`Лабораторна робота №${index}`);
 }
 
 const exercises = {
@@ -11,7 +12,8 @@ const exercises = {
     exercise2: ['Тема мета ЛР №2, місце розташування сайту', 'Способи підключення стилів', 'Селектори', 'Шрифти Текст таблиці фон  списки', 'Висновки'],
     exercise3: ['Тема мета Лр №3 місце розташування', 'Завдання №1', 'Завдання №2', 'Завдання №3', 'Висновки'],
     exercise4: ['Тема мета Лр №4 місце розташування', 'Завдання', 'Висновки'],
-    exercise5: ['Тема мета Лр №5 місце розташування',  'Масиви (4 пункт)', 'Виконання 6 пункту', 'Висновки'],
+    exercise5: ['Тема мета Лр №5 місце розташування', 'Масиви (4 пункт)', 'Виконання 6 пункту', 'Висновки'],
+    exercise6: ['Тема мета Лр №5.1 місце розташування', 'Завдання', 'Висновки'],
 }
 
 
@@ -27,6 +29,7 @@ createExerciseList(document.getElementById('exercise2'), exercises.exercise2);
 createExerciseList(document.getElementById('exercise3'), exercises.exercise3);
 createExerciseList(document.getElementById('exercise4'), exercises.exercise4);
 createExerciseList(document.getElementById('exercise5'), exercises.exercise5);
+createExerciseList(document.getElementById('exercise6'), exercises.exercise6);
 
 navList.forEach((navListItem, index) => {
     let newElement = document.createElement('div');
