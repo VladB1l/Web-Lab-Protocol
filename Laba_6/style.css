@@ -30,3 +30,9 @@ main {
   width: 120px;
   height: 120px;
 }
+
+#boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

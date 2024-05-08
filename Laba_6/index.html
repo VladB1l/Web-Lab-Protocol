@@ -72,7 +72,7 @@
             <form class="login-form" onsubmit="handleSubmit(event)">
                 <label>
                     Email
-                    <input type="text" name="email" />
+                    <input type="email" name="email" />
                 </label>
                 <label>
                     Password
@@ -82,12 +82,35 @@
             </form>
 
         </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №9</h2>
+            <div class="widget">
+                <p>Background color: <span class="color">-</span></p>
+                <button type="button" class="change-color">Change color</button>
+            </div>
+        </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №10</h2>
+            <div class="widget">
+                <div id="controls">
+                    <input type="number" min="1" max="100" step="1" />
+                    <button type="button" data-create>Create</button>
+                    <button type="button" data-destroy>Destroy</button>
+                </div>
+
+                <div id="boxes"></div>
+            </div>
+        </div>
     </main>
     <script src="task2.js"></script>
     <script src="task4.js"></script>
     <script src="task6.js"></script>
     <script src="task7.js"></script>
     <script src="task8.js"></script>
+    <script src="task9.js"></script>
+    <script src="task10.js"></script>
 </body>
 
 </html>
