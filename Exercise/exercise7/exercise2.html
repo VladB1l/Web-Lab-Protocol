@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    img {
+      width: 500px;
+      display: block;
+      margin: auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Завдання2</h2>
+  <p>Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції
+    successCallback та errorCallback.
+
+    // Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.
+
+    // У випадку якщо товар не знайдено, викликається errorCallback і передається повідомлення про помилку.
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+        <code>
+          let products = [
+    {
+        name: 'Ручка',
+        price: 30,
+    },
+    {
+        name: 'Олівець',
+        price: 20,
+    },
+    {
+        name: 'Папір',
+        price: 15,
+    },
+]
+
+console.log(getProductDetails(1, successCallback, errorCallback))
+
+
+function getProductDetails(id, success, error) {
+    return products.length - 1 >= id
+        ? success(id, products[id].name, products[id].price)
+        : error(id)
+}
+
+function successCallback(id, name, price) {
+    return (`Деталі для продукта з productId: ${id}\n Назва товару: ${name};\n Ціна товару: ${price};`)
+}
+
+function errorCallback(id) {
+    return (`Виникла помилка!!!\n Продукт з productId: "${id}", не знайдено`)
+}
+
+
+
+
+        </code>
+    </pre>
+
+  <h2>Завдання4</h2>
+  <p>З об'єкту concerts отримати масив, який буде містити лише імена міст.
+    З масиву потрібно прибрати міста, в яких концерт уже пройшов і відсортувати їх у хронологічному порядку.
+    Результат вивести у консоль.
+    Очікуваний результат ["Одеса", "Умань", "Харків"]
+    Застосувати стрілочні функції
+
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+          <code>
+            const concerts = {
+              Київ: new Date("2020-04-01"),
+              Умань: new Date("2025-07-02"),
+              Вінниця: new Date("2020-04-21"),
+              Одеса: new Date("2025-03-15"),
+              Хмельницький: new Date("2020-04-18"),
+              Харків: new Date("2025-07-10"),
+          };
+          
+          let GetTowns = (allTowns, allDates) => {
+              let newArr = []
+              const now = new Date();
+              for (let i = 0; i < allTowns.length; i++) {
+                  if (now < allDates[i]) {
+                      newArr.push(allTowns[i])
+                  }
+              }
+              return SortTowns(newArr);
+          };
+          
+          let SortTowns = (towns) => {
+              for (let i = 0; i < towns.length; i++) {
+                  let tmp = towns[i];
+                  if (concerts[towns[i]] > concerts[towns[i + 1]]) {
+                      towns[i] = towns[i + 1]
+                      towns[i + 1] = tmp
+                  }
+              }
+              return towns;
+          }
+          
+          
+          console.log(GetTowns(Object.keys(concerts), Object.values(concerts)))ф
+          </code>
+      </pre>
+
+  <h2>Завдання6</h2>
+  <p>Напишіть функцію, яка приймає массив об'єктів і повертає новий массив об'єктів,у якому є знижка на 30 % на всі
+    медикаменти ціна, яких перевищує 300 грн у масиві Надайте ід для кожного медикамента
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+            <code>
+              const medicines = [
+              { name: "Noshpa", price: 170 },
+              { name: "Analgin", price: 55 },
+              { name: "Quanil", price: 310 },
+              { name: "Alphacholine", price: 390 },
+          ];
+          
+          
+          for (let i = 0; i < medicines.length; i++) {
+              medicines[i].id = i
+              if (medicines[i].price > 300) {
+                  medicines[i].price = medicines[i].price - medicines[i].price * 30 / 100
+              }
+          }
+          
+          console.log(medicines)
+            </code>
+        </pre>
+
+  <h2>Завдання8</h2>
+  <p>Напиши функцію конструктор Storage який створює об'єкти Для управління складом товарів. При виклику отримуватиме
+    один агрумент - початковий масив товарів, і записувати їх у властивість items.
+    Додай методи класу: getItems() - повертайте масив товарів addItems(item) - отримує новий товар та додає його до
+    поточних removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+    const arr = ["apple", "banana", "mango"]
+
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+                  <code>
+                    function FuncStorage(arr) {
+                      return {
+                          items: arr,
+                          getItems() {
+                              return this.items;
+                          },
+                          addItems(item) {
+                              this.items.push(item);
+                          },
+                          removeItem(item) {
+                              index = this.items.indexOf(item)
+                              index !== -1
+                                  ? this.items.splice(index, 1)
+                                  : console.log("Такого елемента немає у складі!!!")
+                          }
+                      }
+                  }
+                  const arr = ["apple", "banana", "mango"];
+                  let storage = FuncStorage(arr);
+                  console.log(storage.getItems())
+                  storage.addItems("cherry")
+                  storage.removeItem("appleу")
+                  console.log(storage.getItems())
+                  
+                  </code>
+              </pre>
+
+  <h2>Завдання9</h2>
+  <p>Поверніть об'єкт, в якому вказано кількість тегів.
+    Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+                        <code>
+                          const tweets = [
+                          { id: "000", likes: 5, tags: ["js", "nodejs"] },
+                          { id: "001", likes: 2, tags: ["html", "css"] },
+                          { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+                          { id: "003", likes: 8, tags: ["css", "react"] },
+                          { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+                      ];
+                      
+                      console.log(CounterFunc(tweets))
+                      
+                      
+                      function CounterFunc(array) {
+                          let counterObj = {}
+                          for (const obj of array) {
+                              for (const tag of obj.tags) {
+                                  if (!(`${tag}` in counterObj)) {
+                                      counterObj[tag] = 1;
+                                  }
+                                  else {
+                                      counterObj[tag]++;
+                                  }
+                              }
+                          }
+                      
+                          return counterObj
+                      }
+                        </code>
+                    </pre>
+  <h2>Завдання10</h2>
+  <p>Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn) і перевіряє правильність закриття дужок ()
+    {} []
+    Якщо рядок містить коректний код функція повертає true.
+    В іншому випадку повертає false
+
+  </p>
+  <h2>Код виконання</h2>
+  <pre>
+                              <code>
+                                strings = ['[]', '{]', '{}', '[[]]', '{[]}[()]({})', '{{[]]}']
+                                strings.forEach(string => {
+                                    console.log(checkBrackets(string))
+                                });
+                                
+                                function checkBrackets(str) {
+                                    const stack = [];
+                                    const openingBrackets = ['(', '{', '['];
+                                    const closingBrackets = [')', '}', ']'];
+                                    const bracketPairs = {
+                                        ')': '(',
+                                        '}': '{',
+                                        ']': '['
+                                    };
+                                
+                                    for (let char of str) {
+                                        if (openingBrackets.includes(char)) {
+                                            stack.push(char);
+                                        } else if (closingBrackets.includes(char)) {
+                                            const topOfStack = stack.pop();
+                                            if (topOfStack !== bracketPairs[char]) {
+                                                return false;
+                                            }
+                                        }
+                                    }
+                                
+                                    return stack.length === 0;
+                                }
+                                
+                              </code>
+                          </pre>
+</body>
+
+</html>
