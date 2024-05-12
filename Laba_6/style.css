@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.taskBlock {
+  padding: 30px;
+  background-color: olivedrab;
+  max-width: 500px;
+  width: 100%;
+}
+
+.taskBlock .inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#square {
+  border: 1px dashed yellow;
+  margin: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+#boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

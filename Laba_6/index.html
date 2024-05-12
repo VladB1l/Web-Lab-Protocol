@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laba 6 | Bilokon</title>
+</head>
+
+<body>
+    <h1>Лабораторна робота № 6</h1>
+
+    <main>
+        <div class="taskBlock">
+            <h2>Завдання №2</h2>
+            <div class="inputs"> <button>SWAP ME</button> <input id="task2_input1" type="text" value="dasdsa"> <input
+                    id="task2_input2" type="text"></div>
+        </div>
+        <div class="taskBlock">
+            <h2>Завдання №4</h2>
+            <div id="square"></div>
+            <button id="task4_btn1">Збільшити</button> <button id="task4_btn2">Зменшити</button>
+        </div>
+        <div class="taskBlock">
+            <h2>Завдання №6</h2>
+            <ul id="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <button id="task6_btn">Подвоїти</button>
+        </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №7</h2>
+            <ul id="categories">
+                <li class="item">
+                    <h2>Animals</h2>
+                    <ul>
+                        <li>Cat</li>
+                        <li>Hamster</li>
+                        <li>Horse</li>
+                        <li>Parrot</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>Bread</li>
+                        <li>Prasley</li>
+                        <li>Cheese</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №8</h2>
+            <form class="login-form" onsubmit="handleSubmit(event)">
+                <label>
+                    Email
+                    <input type="email" name="email" />
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" />
+                </label>
+                <button type="submit">Log in</button>
+            </form>
+
+        </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №9</h2>
+            <div class="widget">
+                <p>Background color: <span class="color">-</span></p>
+                <button type="button" class="change-color">Change color</button>
+            </div>
+        </div>
+
+        <div class="taskBlock">
+            <h2>Завдання №10</h2>
+            <div class="widget">
+                <div id="controls">
+                    <input type="number" min="1" max="100" step="1" />
+                    <button type="button" data-create>Create</button>
+                    <button type="button" data-destroy>Destroy</button>
+                </div>
+
+                <div id="boxes"></div>
+            </div>
+        </div>
+    </main>
+    <script src="task2.js"></script>
+    <script src="task4.js"></script>
+    <script src="task6.js"></script>
+    <script src="task7.js"></script>
+    <script src="task8.js"></script>
+    <script src="task9.js"></script>
+    <script src="task10.js"></script>
+</body>
+
+</html>

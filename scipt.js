@@ -14,22 +14,17 @@ const exercises = {
     exercise4: ['Тема мета Лр №4 місце розташування', 'Завдання', 'Висновки'],
     exercise5: ['Тема мета Лр №5 місце розташування', 'Масиви (4 пункт)', 'Виконання 6 пункту', 'Висновки'],
     exercise6: ['Тема мета Лр №5.1 місце розташування', 'Завдання', 'Висновки'],
+    exercise7: ['Тема мета Лр №5.1 місце розташування', 'Завдання', 'Висновки'],
 }
 
-
+for (let i = 1; i <= Object.keys(exercises).length; i++) {
+    createExerciseList(document.getElementById(`exercise${i}`), exercises[`exercise${i}`])
+}
 
 function ToggleExercise(clicked_id, exercise_id) {
     let source = `./Exercise/${exercise_id}/exercise${clicked_id}.html`;
     iframe.src = source;
 }
-
-
-createExerciseList(document.getElementById('exercise1'), exercises.exercise1);
-createExerciseList(document.getElementById('exercise2'), exercises.exercise2);
-createExerciseList(document.getElementById('exercise3'), exercises.exercise3);
-createExerciseList(document.getElementById('exercise4'), exercises.exercise4);
-createExerciseList(document.getElementById('exercise5'), exercises.exercise5);
-createExerciseList(document.getElementById('exercise6'), exercises.exercise6);
 
 navList.forEach((navListItem, index) => {
     let newElement = document.createElement('div');
