@@ -23,5 +23,4 @@ for (let i = 0; i < images.length; i++) {
 gallery.onclick = function (event) {
     let target = event.target
     target.tagName === 'IMG' &&  console.log(`Посилання на велике зображення ${target.src} `)
-
 }

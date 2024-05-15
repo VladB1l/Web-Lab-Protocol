@@ -7,10 +7,10 @@ let formData = {
 }
 
 CheckStorage()
-form.addEventListener('input', updateFormData);
+form.addEventListener('input', UpdateFormData);
 
 
-function updateFormData(event) {
+function UpdateFormData(event) {
     const { name, value } = event.target;
     formData[name] = value;
     SaveFormData();

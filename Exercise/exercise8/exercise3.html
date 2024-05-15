@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 500px;
+            display: block;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Завдання 2</h2>
+    <p>Виконуй це завдання у файлах 2-form.html і 2-form.js.
+        Додати у HTML розмітку форми. У JS написати скрипт, який буде зберігати значення полів у локальне сховище, коли
+        користувач щось друкує. Оголосити поза будь-якими функціями об’єкт formData з полями email та message, які
+        спочатку мають порожні рядки як значення: { email: "", message: "" }.
+        Використовувати метод делегування для відстеження змін у формі через подію input. Зберігати актуальні дані з
+        полів email та message у formData та записувати цей об’єкт у локальне сховище. Використовувати ключ
+        "feedback-form-state" для зберігання даних у сховищі.
+        При завантаженні сторінки перевірити, чи є дані у локальному сховищі. Якщо так, використовувати їх для
+        заповнення форми та об'єкта formData. Якщо ні, залишити поля форми порожніми.
+        Перед відправленням форми переконатися, що обидва поля форми заповнені. Якщо будь-яке з полів (властивостей
+        об’єкта formData) порожнє, показати сповіщення з текстом «Fill please all fields». Якщо всі поля заповнені,
+        вивести у консоль об’єкт formData з актуальними значеннями, очистити локальне сховище, об’єкт formData і поля
+        форми.
+
+    </p>
+
+    <h2>Код виконання</h2>
+    <pre>
+        <code>
+            let form = document.querySelector("form")
+            let email = document.querySelector('input[name="email"]')
+            let message = document.querySelector('textarea[name="message"]')
+            let formData = {
+                email: "",
+                message: "",
+            }
+            
+            CheckStorage()
+            form.addEventListener('input', updateFormData);
+            
+            
+            function updateFormData(event) {
+                const { name, value } = event.target;
+                formData[name] = value;
+                SaveFormData();
+            }
+            
+            function SaveFormData() {
+                localStorage.setItem(`feedback-form-state`, JSON.stringify(formData))
+            }
+            
+            function CheckStorage() {
+                let getItem = localStorage.getItem('feedback-form-state')
+                if (getItem !== null) {
+                    let localData = JSON.parse(getItem)
+                    email.value = localData.email
+                    message.value = localData.message
+                }
+            }
+            
+            
+            function handleSubmit(event) {
+                event.preventDefault();
+                form = event.target
+            
+                let email = form.elements.email.value.trim()
+                let message = form.elements.message.value.trim()
+            
+                if (email === "" || message === "") {
+                    alert("Fill please all fields!!!")
+                } else {
+                    console.log(formData)
+                    form.reset()
+                    formData.email = ''
+                    formData.message = ''
+                    localStorage.clear();
+                }
+            
+            }
+            
+        </code>
+    </pre>
+</body>
+
+</html>
