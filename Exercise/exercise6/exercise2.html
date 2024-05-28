@@ -2,43 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-  <style>
-    img {
-      width: 500px;
-      display: block;
-      margin: auto;
-    }
+    <style>
+        img {
+            width: 500px;
+            display: block;
+            margin: auto;
+        }
 
-    h1,
-    h2,
-    h3 {
-      text-align: center;
-    }
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
 
-    div {
-      display: flex;
-      justify-content: center;
-      margin: 20px;
-    }
-  </style>
+        div {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
-  <h2>Завдання2</h2>
-  <p>Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції
-    successCallback та errorCallback.
+    <h2>Завдання2</h2>
+    <p>Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції
+        successCallback та errorCallback.
 
-    // Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.
+        // Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.
 
-    // У випадку якщо товар не знайдено, викликається errorCallback і передається повідомлення про помилку.
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+        // У випадку якщо товар не знайдено, викликається errorCallback і передається повідомлення про помилку.
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
         <code>
           let products = [
     {
@@ -77,17 +77,18 @@ function errorCallback(id) {
 
         </code>
     </pre>
+    <img src="../../img/5.1Laba/task2.png" alt="program">
 
-  <h2>Завдання4</h2>
-  <p>З об'єкту concerts отримати масив, який буде містити лише імена міст.
-    З масиву потрібно прибрати міста, в яких концерт уже пройшов і відсортувати їх у хронологічному порядку.
-    Результат вивести у консоль.
-    Очікуваний результат ["Одеса", "Умань", "Харків"]
-    Застосувати стрілочні функції
+    <h2>Завдання4</h2>
+    <p>З об'єкту concerts отримати масив, який буде містити лише імена міст.
+        З масиву потрібно прибрати міста, в яких концерт уже пройшов і відсортувати їх у хронологічному порядку.
+        Результат вивести у консоль.
+        Очікуваний результат ["Одеса", "Умань", "Харків"]
+        Застосувати стрілочні функції
 
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
           <code>
             const concerts = {
               Київ: new Date("2020-04-01"),
@@ -124,13 +125,14 @@ function errorCallback(id) {
           console.log(GetTowns(Object.keys(concerts), Object.values(concerts)))ф
           </code>
       </pre>
+    <img src="../../img/5.1Laba/task4.png" alt="program">
 
-  <h2>Завдання6</h2>
-  <p>Напишіть функцію, яка приймає массив об'єктів і повертає новий массив об'єктів,у якому є знижка на 30 % на всі
-    медикаменти ціна, яких перевищує 300 грн у масиві Надайте ід для кожного медикамента
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+    <h2>Завдання6</h2>
+    <p>Напишіть функцію, яка приймає массив об'єктів і повертає новий массив об'єктів,у якому є знижка на 30 % на всі
+        медикаменти ціна, яких перевищує 300 грн у масиві Надайте ід для кожного медикамента
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
             <code>
               const medicines = [
               { name: "Noshpa", price: 170 },
@@ -150,17 +152,18 @@ function errorCallback(id) {
           console.log(medicines)
             </code>
         </pre>
+    <img src="../../img/5.1Laba/task6.png" alt="program">
 
-  <h2>Завдання8</h2>
-  <p>Напиши функцію конструктор Storage який створює об'єкти Для управління складом товарів. При виклику отримуватиме
-    один агрумент - початковий масив товарів, і записувати їх у властивість items.
-    Додай методи класу: getItems() - повертайте масив товарів addItems(item) - отримує новий товар та додає його до
-    поточних removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
-    const arr = ["apple", "banana", "mango"]
+    <h2>Завдання8</h2>
+    <p>Напиши функцію конструктор Storage який створює об'єкти Для управління складом товарів. При виклику отримуватиме
+        один агрумент - початковий масив товарів, і записувати їх у властивість items.
+        Додай методи класу: getItems() - повертайте масив товарів addItems(item) - отримує новий товар та додає його до
+        поточних removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+        const arr = ["apple", "banana", "mango"]
 
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
                   <code>
                     function FuncStorage(arr) {
                       return {
@@ -189,13 +192,15 @@ function errorCallback(id) {
                   </code>
               </pre>
 
-  <h2>Завдання9</h2>
-  <p>Поверніть об'єкт, в якому вказано кількість тегів.
-    Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+    <img src="../../img/5.1Laba/task8.png" alt="program">
 
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+    <h2>Завдання9</h2>
+    <p>Поверніть об'єкт, в якому вказано кількість тегів.
+        Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
                         <code>
                           const tweets = [
                           { id: "000", likes: 5, tags: ["js", "nodejs"] },
@@ -225,15 +230,17 @@ function errorCallback(id) {
                       }
                         </code>
                     </pre>
-  <h2>Завдання10</h2>
-  <p>Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn) і перевіряє правильність закриття дужок ()
-    {} []
-    Якщо рядок містить коректний код функція повертає true.
-    В іншому випадку повертає false
+    <img src="../../img/5.1Laba/task9.png" alt="program">
 
-  </p>
-  <h2>Код виконання</h2>
-  <pre>
+    <h2>Завдання10</h2>
+    <p>Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn) і перевіряє правильність закриття дужок ()
+        {} []
+        Якщо рядок містить коректний код функція повертає true.
+        В іншому випадку повертає false
+
+    </p>
+    <h2>Код виконання</h2>
+    <pre>
                               <code>
                                 strings = ['[]', '{]', '{}', '[[]]', '{[]}[()]({})', '{{[]]}']
                                 strings.forEach(string => {
@@ -266,6 +273,7 @@ function errorCallback(id) {
                                 
                               </code>
                           </pre>
+    <img src="../../img/5.1Laba/task10.png" alt="program">
 </body>
 
 </html>
