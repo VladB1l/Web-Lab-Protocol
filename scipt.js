@@ -2,7 +2,7 @@ const nav = document.querySelector("nav");
 const iframe = document.getElementById("iframe")
 let navList = [];
 
-for (let i = 1; i <= 9; i++) {
+for (let i = 1; i <= 10; i++) {
     index = i === 6 ? 5.1 : (i < 6 ? i : i - 1);
     navList.push(`Лабораторна робота №${index}`);
 }
@@ -16,6 +16,8 @@ const exercises = {
     exercise6: ['Тема мета Лр №5.1 місце розташування', 'Завдання', 'Висновки'],
     exercise7: ['Тема мета Лр №6 місце розташування', 'Завдання', 'Висновки'],
     exercise8: ['Тема мета Лр №7 місце розташування', 'Завдання1', 'Завдання2', 'Висновки'],
+    exercise9: ['Лр №8 місце розташування', 'Сертифікат та оцінки', 'Скріншоти проходження тестів'],
+    exercise10: ['Лр №9 місце розташування', 'Сертифікат та оцінки', 'Скріншоти проходження тестів'],
 }
 
 for (let i = 1; i <= Object.keys(exercises).length; i++) {
