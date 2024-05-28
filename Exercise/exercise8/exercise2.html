@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 500px;
+            display: block;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Завдання 1</h2>
+    <p>Створити файл index.html і дві папки: CSS та JS. У папці CSS створити файл style.css. У папці JS створити файл
+        gallery.js. У свій JavaScript файл додай масив зображень. Кожний об’єкт являє собою один елемент галереї.
+        Виконати делегування, а саме додати функціонал прослуховування кліка по елементах галереї та отримання посилання
+        на велике зображення при кліку. Для цього використовуй прийом делегування на ul.gallery. Поки що при кліку на
+        елемент галереї виводь у консоль посилання на велике зображення. 11. Підключення бібліотеки.
+        Бібліотека basicLightbox представляє повністю функціональне модальне вікно, яке відмінно підходить під
+        поставлену задачу. Використовуйте CDN сервіс jsdelivr і додай в HTML файл посилання на мініфіковані (.min) JS та
+        CSS файли бібліотеки.
+
+    </p>
+
+    <h2>Код виконання</h2>
+    <pre>
+        <code>
+            const images = [];
+            for (let i = 0; i < 6; i++) {
+                let newObject = {};
+                newObject.preview = `./img/picture${i + 1}.jpg`;
+                newObject.original = `./img/picture${i + 1}.jpg`;
+                newObject.description = `picture${i + 1}`;
+                images.push(newObject);
+            }
+            
+            let gallery = document.querySelector('.gallery');
+            
+            for (let i = 0; i < images.length; i++) {
+                let newElement = document.createElement('li');
+                newElement.innerHTML = `img src=${'images[i].preview}' alt='${images[i].description}';
+                newElement.onclick = () => {
+                    basicLightbox.create(`
+                        img width="1400" height="900" src="${images[i].original}"
+                    `).show();
+                };
+                gallery.append(newElement);
+            }
+            
+            gallery.onclick = function (event) {
+                let target = event.target
+                target.tagName === 'IMG' &&  console.log(`Посилання на велике зображення ${target.src} `)
+            
+            }
+            
+        </code>
+    </pre>
+</body>
+
+</html>
